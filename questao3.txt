@@ -1,0 +1,42 @@
+Pergunta : É possível inverter palavras individuais em uma String usando pilha? 
+Se sim, explique os passos para faze-la. Caso contrário explique os motivos que
+ impossibilitam esse algoritmo de funcionar.
+
+Resposta : Sim, é possível fazer. O algorítmo pra fazer isso irá empilhar cada 
+caractere da palavra e montar uma uma nova string desempilhando as letras 
+empilhadas. Se utilizássemos a palavra "corda", poderíamos empilhar os caracteres
+e ficaria dessa forma : 
+| A |
+| D |
+| R |
+| O |
+| C |
+E após isso o código iria escrever uma nova string com o método "pilha.pop" que
+seria o método de desempilhar o que está no topo da pilha. Ficando dessa forma : 
+1)
+| A |
+| D |
+| R |
+| O |
+| C |        -->    String : ''
+
+2)
+| D |
+| R |
+| O |
+| C |        -->    String : 'A'
+
+3)
+| R |
+| O |
+| C |        -->    String : 'AD'
+
+4)
+| O |
+| C |        -->    String : 'ADR'
+
+5)
+| C |        -->    String : 'ADRO'
+
+6)
+             -->    String : 'ADROC'
